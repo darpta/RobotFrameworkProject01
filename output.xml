@@ -1,123 +1,388 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 7.0 (Python 3.12.2 on win32)" generated="2024-04-10T19:44:50.218353" rpa="false" schemaversion="5">
-<suite id="s1" name="Test001" source="C:\Users\Dario\PycharmProjects\RobotFrameworkProject01\Automation\test001.robot">
-<test id="s1-t1" name="MyFirstTest" line="49">
-<kw name="Open Wikipedia" type="SETUP">
+<robot generator="Robot 7.0 (Python 3.12.2 on win32)" generated="2024-04-11T19:45:15.214903" rpa="false" schemaversion="5">
+<suite id="s1" name="webElements01" source="C:\Users\Dario\PycharmProjects\RobotFrameworkProject01\Automation\webElements01.robot">
+<test id="s1-t1" name="Empik Test Case" line="16">
+<kw name="Open Empik Bestseller">
 <kw name="Open Browser" owner="SeleniumLibrary">
-<msg time="2024-04-10T19:44:50.443364" level="INFO">Opening browser 'Chrome' to base url 'https://pl.wikipedia.org'.</msg>
-<arg>https://pl.wikipedia.org</arg>
+<msg time="2024-04-11T19:45:15.462066" level="INFO">Opening browser 'Chrome' to base url 'https://www.empik.com/bestsellery'.</msg>
+<arg>${empikbestsellers_url}</arg>
 <arg>Chrome</arg>
 <arg>executable_path=c:/chromedriver/chromedriver.exe</arg>
 <doc>Opens a new browser instance to the optional ``url``.</doc>
-<status status="PASS" start="2024-04-10T19:44:50.442352" elapsed="3.482731"/>
-</kw>
-<status status="PASS" start="2024-04-10T19:44:50.442352" elapsed="3.483731"/>
-</kw>
-<kw name="Log In Wikipedia">
-<kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2024-04-10T19:44:53.927083" level="INFO">Clicking element 'id:pt-login-2'.</msg>
-<arg>id:pt-login-2</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2024-04-10T19:44:53.927083" elapsed="1.379000"/>
-</kw>
-<kw name="Get Text" owner="SeleniumLibrary">
-<msg time="2024-04-10T19:44:55.341091" level="INFO">${my_value} = </msg>
-<var>${my_value}</var>
-<arg>id:wpName1</arg>
-<doc>Returns the text value of the element identified by ``locator``.</doc>
-<status status="PASS" start="2024-04-10T19:44:55.306083" elapsed="0.035008"/>
-</kw>
-<kw name="Should Be Empty" owner="BuiltIn">
-<msg time="2024-04-10T19:44:55.342084" level="INFO">Length is 0.</msg>
-<arg>${my_value}</arg>
-<doc>Verifies that the given item is empty.</doc>
-<status status="PASS" start="2024-04-10T19:44:55.341091" elapsed="0.000993"/>
-</kw>
-<kw name="Checkbox Should Not Be Selected" owner="SeleniumLibrary">
-<msg time="2024-04-10T19:44:55.342084" level="INFO">Verifying checkbox 'name:wpRemember' is not selected.</msg>
-<arg>name:wpRemember</arg>
-<doc>Verifies checkbox ``locator`` is not selected/checked.</doc>
-<status status="PASS" start="2024-04-10T19:44:55.342084" elapsed="0.047999"/>
-</kw>
-<kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2024-04-10T19:44:55.391082" level="INFO">Typing text 'RobotTests' into text field 'id:wpName1'.</msg>
-<arg>id:wpName1</arg>
-<arg>${login}</arg>
-<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2024-04-10T19:44:55.391082" elapsed="0.112006"/>
-</kw>
-<kw name="Input Password" owner="SeleniumLibrary">
-<msg time="2024-04-10T19:44:55.503088" level="INFO">Typing password into text field 'id:wpPassword1'.</msg>
-<msg time="2024-04-10T19:44:55.540082" level="INFO">Temporally setting log level to: NONE</msg>
-<arg>id:wpPassword1</arg>
-<arg>${password}</arg>
-<doc>Types the given password into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2024-04-10T19:44:55.503088" elapsed="0.090994"/>
-</kw>
-<kw name="Select Checkbox" owner="SeleniumLibrary">
-<msg time="2024-04-10T19:44:55.594082" level="INFO">Selecting checkbox 'name:wpRemember'.</msg>
-<arg>name:wpRemember</arg>
-<doc>Selects the checkbox identified by ``locator``.</doc>
-<status status="PASS" start="2024-04-10T19:44:55.594082" elapsed="0.058000"/>
+<status status="PASS" start="2024-04-11T19:45:15.462066" elapsed="6.377194"/>
 </kw>
 <kw name="Click Button" owner="SeleniumLibrary">
-<msg time="2024-04-10T19:44:55.652082" level="INFO">Clicking button 'id:wpLoginAttempt'.</msg>
-<arg>id:wpLoginAttempt</arg>
+<msg time="2024-04-11T19:45:21.840260" level="INFO">Clicking button 'xpath://div[@class='css-vtjrpu-buttonsMobile-buttonsMobile']//button[@type='button'][normalize-space()='Zaakceptuj zgody']'.</msg>
+<arg>xpath://div[@class='css-vtjrpu-buttonsMobile-buttonsMobile']//button[@type='button'][normalize-space()='Zaakceptuj zgody']</arg>
 <doc>Clicks the button identified by ``locator``.</doc>
-<status status="PASS" start="2024-04-10T19:44:55.652082" elapsed="7.157700"/>
+<status status="PASS" start="2024-04-11T19:45:21.839260" elapsed="0.122001"/>
 </kw>
-<arg>${wikipedia_login}</arg>
-<arg>${wikipedia_password}</arg>
-<status status="PASS" start="2024-04-10T19:44:53.926083" elapsed="8.883699"/>
+<status status="PASS" start="2024-04-11T19:45:15.461067" elapsed="6.500194"/>
 </kw>
-<kw name="Capture Page Screenshot" owner="SeleniumLibrary">
-<msg time="2024-04-10T19:45:03.068114" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="screeny/screenshot.png"&gt;&lt;img src="screeny/screenshot.png" width="800px"&gt;&lt;/a&gt;</msg>
-<arg>${project_path}/screenshot.png</arg>
-<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
-<status status="PASS" start="2024-04-10T19:45:02.810773" elapsed="0.257341"/>
+<kw name="Get WebElements" owner="SeleniumLibrary">
+<msg time="2024-04-11T19:45:21.976259" level="INFO">${empikbestsellers_list} = [&lt;selenium.webdriver.remote.webelement.WebElement (session="59797cf984203ddc39ca0987fb213974", element="f.C2895BC220E9BA38062F8B04B4617EE7.d.140BD97D166C6EC1A71C4064B40314BF.e.82")&gt;, &lt;selenium.webdriv...</msg>
+<var>${empikbestsellers_list}</var>
+<arg>class:ta-product-title</arg>
+<doc>Returns a list of WebElement objects matching the ``locator``.</doc>
+<status status="PASS" start="2024-04-11T19:45:21.961261" elapsed="0.014998"/>
 </kw>
+<kw name="Log List" owner="Collections">
+<msg time="2024-04-11T19:45:21.976259" level="INFO">List length is 30 and it contains following items:
+0: &lt;selenium.webdriver.remote.webelement.WebElement (session="59797cf984203ddc39ca0987fb213974", element="f.C2895BC220E9BA38062F8B04B4617EE7.d.140BD97D166C6EC1A71C4064B40314BF.e.82")&gt;
+1: &lt;selenium.webdriver.remote.webelement.WebElement (session="59797cf984203ddc39ca0987fb213974", element="f.C2895BC220E9BA38062F8B04B4617EE7.d.140BD97D166C6EC1A71C4064B40314BF.e.83")&gt;
+2: &lt;selenium.webdriver.remote.webelement.WebElement (session="59797cf984203ddc39ca0987fb213974", element="f.C2895BC220E9BA38062F8B04B4617EE7.d.140BD97D166C6EC1A71C4064B40314BF.e.84")&gt;
+3: &lt;selenium.webdriver.remote.webelement.WebElement (session="59797cf984203ddc39ca0987fb213974", element="f.C2895BC220E9BA38062F8B04B4617EE7.d.140BD97D166C6EC1A71C4064B40314BF.e.85")&gt;
+4: &lt;selenium.webdriver.remote.webelement.WebElement (session="59797cf984203ddc39ca0987fb213974", element="f.C2895BC220E9BA38062F8B04B4617EE7.d.140BD97D166C6EC1A71C4064B40314BF.e.86")&gt;
+5: &lt;selenium.webdriver.remote.webelement.WebElement (session="59797cf984203ddc39ca0987fb213974", element="f.C2895BC220E9BA38062F8B04B4617EE7.d.140BD97D166C6EC1A71C4064B40314BF.e.87")&gt;
+6: &lt;selenium.webdriver.remote.webelement.WebElement (session="59797cf984203ddc39ca0987fb213974", element="f.C2895BC220E9BA38062F8B04B4617EE7.d.140BD97D166C6EC1A71C4064B40314BF.e.88")&gt;
+7: &lt;selenium.webdriver.remote.webelement.WebElement (session="59797cf984203ddc39ca0987fb213974", element="f.C2895BC220E9BA38062F8B04B4617EE7.d.140BD97D166C6EC1A71C4064B40314BF.e.89")&gt;
+8: &lt;selenium.webdriver.remote.webelement.WebElement (session="59797cf984203ddc39ca0987fb213974", element="f.C2895BC220E9BA38062F8B04B4617EE7.d.140BD97D166C6EC1A71C4064B40314BF.e.90")&gt;
+9: &lt;selenium.webdriver.remote.webelement.WebElement (session="59797cf984203ddc39ca0987fb213974", element="f.C2895BC220E9BA38062F8B04B4617EE7.d.140BD97D166C6EC1A71C4064B40314BF.e.91")&gt;
+10: &lt;selenium.webdriver.remote.webelement.WebElement (session="59797cf984203ddc39ca0987fb213974", element="f.C2895BC220E9BA38062F8B04B4617EE7.d.140BD97D166C6EC1A71C4064B40314BF.e.92")&gt;
+11: &lt;selenium.webdriver.remote.webelement.WebElement (session="59797cf984203ddc39ca0987fb213974", element="f.C2895BC220E9BA38062F8B04B4617EE7.d.140BD97D166C6EC1A71C4064B40314BF.e.93")&gt;
+12: &lt;selenium.webdriver.remote.webelement.WebElement (session="59797cf984203ddc39ca0987fb213974", element="f.C2895BC220E9BA38062F8B04B4617EE7.d.140BD97D166C6EC1A71C4064B40314BF.e.94")&gt;
+13: &lt;selenium.webdriver.remote.webelement.WebElement (session="59797cf984203ddc39ca0987fb213974", element="f.C2895BC220E9BA38062F8B04B4617EE7.d.140BD97D166C6EC1A71C4064B40314BF.e.95")&gt;
+14: &lt;selenium.webdriver.remote.webelement.WebElement (session="59797cf984203ddc39ca0987fb213974", element="f.C2895BC220E9BA38062F8B04B4617EE7.d.140BD97D166C6EC1A71C4064B40314BF.e.96")&gt;
+15: &lt;selenium.webdriver.remote.webelement.WebElement (session="59797cf984203ddc39ca0987fb213974", element="f.C2895BC220E9BA38062F8B04B4617EE7.d.140BD97D166C6EC1A71C4064B40314BF.e.97")&gt;
+16: &lt;selenium.webdriver.remote.webelement.WebElement (session="59797cf984203ddc39ca0987fb213974", element="f.C2895BC220E9BA38062F8B04B4617EE7.d.140BD97D166C6EC1A71C4064B40314BF.e.98")&gt;
+17: &lt;selenium.webdriver.remote.webelement.WebElement (session="59797cf984203ddc39ca0987fb213974", element="f.C2895BC220E9BA38062F8B04B4617EE7.d.140BD97D166C6EC1A71C4064B40314BF.e.99")&gt;
+18: &lt;selenium.webdriver.remote.webelement.WebElement (session="59797cf984203ddc39ca0987fb213974", element="f.C2895BC220E9BA38062F8B04B4617EE7.d.140BD97D166C6EC1A71C4064B40314BF.e.100")&gt;
+19: &lt;selenium.webdriver.remote.webelement.WebElement (session="59797cf984203ddc39ca0987fb213974", element="f.C2895BC220E9BA38062F8B04B4617EE7.d.140BD97D166C6EC1A71C4064B40314BF.e.101")&gt;
+20: &lt;selenium.webdriver.remote.webelement.WebElement (session="59797cf984203ddc39ca0987fb213974", element="f.C2895BC220E9BA38062F8B04B4617EE7.d.140BD97D166C6EC1A71C4064B40314BF.e.102")&gt;
+21: &lt;selenium.webdriver.remote.webelement.WebElement (session="59797cf984203ddc39ca0987fb213974", element="f.C2895BC220E9BA38062F8B04B4617EE7.d.140BD97D166C6EC1A71C4064B40314BF.e.103")&gt;
+22: &lt;selenium.webdriver.remote.webelement.WebElement (session="59797cf984203ddc39ca0987fb213974", element="f.C2895BC220E9BA38062F8B04B4617EE7.d.140BD97D166C6EC1A71C4064B40314BF.e.104")&gt;
+23: &lt;selenium.webdriver.remote.webelement.WebElement (session="59797cf984203ddc39ca0987fb213974", element="f.C2895BC220E9BA38062F8B04B4617EE7.d.140BD97D166C6EC1A71C4064B40314BF.e.105")&gt;
+24: &lt;selenium.webdriver.remote.webelement.WebElement (session="59797cf984203ddc39ca0987fb213974", element="f.C2895BC220E9BA38062F8B04B4617EE7.d.140BD97D166C6EC1A71C4064B40314BF.e.106")&gt;
+25: &lt;selenium.webdriver.remote.webelement.WebElement (session="59797cf984203ddc39ca0987fb213974", element="f.C2895BC220E9BA38062F8B04B4617EE7.d.140BD97D166C6EC1A71C4064B40314BF.e.107")&gt;
+26: &lt;selenium.webdriver.remote.webelement.WebElement (session="59797cf984203ddc39ca0987fb213974", element="f.C2895BC220E9BA38062F8B04B4617EE7.d.140BD97D166C6EC1A71C4064B40314BF.e.108")&gt;
+27: &lt;selenium.webdriver.remote.webelement.WebElement (session="59797cf984203ddc39ca0987fb213974", element="f.C2895BC220E9BA38062F8B04B4617EE7.d.140BD97D166C6EC1A71C4064B40314BF.e.109")&gt;
+28: &lt;selenium.webdriver.remote.webelement.WebElement (session="59797cf984203ddc39ca0987fb213974", element="f.C2895BC220E9BA38062F8B04B4617EE7.d.140BD97D166C6EC1A71C4064B40314BF.e.110")&gt;
+29: &lt;selenium.webdriver.remote.webelement.WebElement (session="59797cf984203ddc39ca0987fb213974", element="f.C2895BC220E9BA38062F8B04B4617EE7.d.140BD97D166C6EC1A71C4064B40314BF.e.111")&gt;</msg>
+<arg>${empikbestsellers_list}</arg>
+<doc>Logs the length and contents of the ``list`` using given ``level``.</doc>
+<status status="PASS" start="2024-04-11T19:45:21.976259" elapsed="0.000000"/>
+</kw>
+<for flavor="IN">
+<iter>
+<kw name="Log" owner="BuiltIn">
+<msg time="2024-04-11T19:45:21.991266" level="INFO">1 Diament. Rodzina Monet. Tom 4. Część 2</msg>
+<arg>${element.text}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2024-04-11T19:45:21.977277" elapsed="0.014989"/>
+</kw>
+<var name="${element}">&lt;selenium.webdriver.remote.webelement.WebElement (session="59797cf984203ddc39ca0987fb213974", element="f.C2895BC220E9BA38062F8B04B4617EE7.d.140BD97D166C6EC1A71C4064B40314BF.e.82")&gt;</var>
+<status status="PASS" start="2024-04-11T19:45:21.977277" elapsed="0.014989"/>
+</iter>
+<iter>
+<kw name="Log" owner="BuiltIn">
+<msg time="2024-04-11T19:45:22.000260" level="INFO">2 #1 Pomiędzy – serial oryginalny</msg>
+<arg>${element.text}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2024-04-11T19:45:21.992266" elapsed="0.007994"/>
+</kw>
+<var name="${element}">&lt;selenium.webdriver.remote.webelement.WebElement (session="59797cf984203ddc39ca0987fb213974", element="f.C2895BC220E9BA38062F8B04B4617EE7.d.140BD97D166C6EC1A71C4064B40314BF.e.83")&gt;</var>
+<status status="PASS" start="2024-04-11T19:45:21.992266" elapsed="0.007994"/>
+</iter>
+<iter>
+<kw name="Log" owner="BuiltIn">
+<msg time="2024-04-11T19:45:22.009613" level="INFO">3 I Wanna Fall. Dark Side</msg>
+<arg>${element.text}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2024-04-11T19:45:22.000260" elapsed="0.009353"/>
+</kw>
+<var name="${element}">&lt;selenium.webdriver.remote.webelement.WebElement (session="59797cf984203ddc39ca0987fb213974", element="f.C2895BC220E9BA38062F8B04B4617EE7.d.140BD97D166C6EC1A71C4064B40314BF.e.84")&gt;</var>
+<status status="PASS" start="2024-04-11T19:45:22.000260" elapsed="0.010350"/>
+</iter>
+<iter>
+<kw name="Log" owner="BuiltIn">
+<msg time="2024-04-11T19:45:22.017621" level="INFO">4 Rzeźbiarz łez</msg>
+<arg>${element.text}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2024-04-11T19:45:22.010610" elapsed="0.007011"/>
+</kw>
+<var name="${element}">&lt;selenium.webdriver.remote.webelement.WebElement (session="59797cf984203ddc39ca0987fb213974", element="f.C2895BC220E9BA38062F8B04B4617EE7.d.140BD97D166C6EC1A71C4064B40314BF.e.85")&gt;</var>
+<status status="PASS" start="2024-04-11T19:45:22.010610" elapsed="0.007011"/>
+</iter>
+<iter>
+<kw name="Log" owner="BuiltIn">
+<msg time="2024-04-11T19:45:22.025613" level="INFO">5 Paderborn</msg>
+<arg>${element.text}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2024-04-11T19:45:22.017621" elapsed="0.007992"/>
+</kw>
+<var name="${element}">&lt;selenium.webdriver.remote.webelement.WebElement (session="59797cf984203ddc39ca0987fb213974", element="f.C2895BC220E9BA38062F8B04B4617EE7.d.140BD97D166C6EC1A71C4064B40314BF.e.86")&gt;</var>
+<status status="PASS" start="2024-04-11T19:45:22.017621" elapsed="0.007992"/>
+</iter>
+<iter>
+<kw name="Log" owner="BuiltIn">
+<msg time="2024-04-11T19:45:22.033613" level="INFO">6 Dark Agony</msg>
+<arg>${element.text}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2024-04-11T19:45:22.026653" elapsed="0.006960"/>
+</kw>
+<var name="${element}">&lt;selenium.webdriver.remote.webelement.WebElement (session="59797cf984203ddc39ca0987fb213974", element="f.C2895BC220E9BA38062F8B04B4617EE7.d.140BD97D166C6EC1A71C4064B40314BF.e.87")&gt;</var>
+<status status="PASS" start="2024-04-11T19:45:22.026653" elapsed="0.006960"/>
+</iter>
+<iter>
+<kw name="Log" owner="BuiltIn">
+<msg time="2024-04-11T19:45:22.064626" level="INFO">7 Venom. W otchłani chaosu. Tom 2</msg>
+<arg>${element.text}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2024-04-11T19:45:22.033613" elapsed="0.031013"/>
+</kw>
+<var name="${element}">&lt;selenium.webdriver.remote.webelement.WebElement (session="59797cf984203ddc39ca0987fb213974", element="f.C2895BC220E9BA38062F8B04B4617EE7.d.140BD97D166C6EC1A71C4064B40314BF.e.88")&gt;</var>
+<status status="PASS" start="2024-04-11T19:45:22.033613" elapsed="0.031013"/>
+</iter>
+<iter>
+<kw name="Log" owner="BuiltIn">
+<msg time="2024-04-11T19:45:22.252614" level="INFO">8 Glukozowa rewolucja</msg>
+<arg>${element.text}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2024-04-11T19:45:22.064626" elapsed="0.187988"/>
+</kw>
+<var name="${element}">&lt;selenium.webdriver.remote.webelement.WebElement (session="59797cf984203ddc39ca0987fb213974", element="f.C2895BC220E9BA38062F8B04B4617EE7.d.140BD97D166C6EC1A71C4064B40314BF.e.89")&gt;</var>
+<status status="PASS" start="2024-04-11T19:45:22.064626" elapsed="0.187988"/>
+</iter>
+<iter>
+<kw name="Log" owner="BuiltIn">
+<msg time="2024-04-11T19:45:22.318621" level="INFO">9 Venom</msg>
+<arg>${element.text}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2024-04-11T19:45:22.252614" elapsed="0.067000"/>
+</kw>
+<var name="${element}">&lt;selenium.webdriver.remote.webelement.WebElement (session="59797cf984203ddc39ca0987fb213974", element="f.C2895BC220E9BA38062F8B04B4617EE7.d.140BD97D166C6EC1A71C4064B40314BF.e.90")&gt;</var>
+<status status="PASS" start="2024-04-11T19:45:22.252614" elapsed="0.067000"/>
+</iter>
+<iter>
+<kw name="Log" owner="BuiltIn">
+<msg time="2024-04-11T19:45:22.327613" level="INFO">10 Sztuczna zastawka serca. Czyli życie z zegarkiem</msg>
+<arg>${element.text}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2024-04-11T19:45:22.319614" elapsed="0.007999"/>
+</kw>
+<var name="${element}">&lt;selenium.webdriver.remote.webelement.WebElement (session="59797cf984203ddc39ca0987fb213974", element="f.C2895BC220E9BA38062F8B04B4617EE7.d.140BD97D166C6EC1A71C4064B40314BF.e.91")&gt;</var>
+<status status="PASS" start="2024-04-11T19:45:22.319614" elapsed="0.007999"/>
+</iter>
+<iter>
+<kw name="Log" owner="BuiltIn">
+<msg time="2024-04-11T19:45:22.336612" level="INFO">11 Hellish Heat</msg>
+<arg>${element.text}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2024-04-11T19:45:22.328615" elapsed="0.007997"/>
+</kw>
+<var name="${element}">&lt;selenium.webdriver.remote.webelement.WebElement (session="59797cf984203ddc39ca0987fb213974", element="f.C2895BC220E9BA38062F8B04B4617EE7.d.140BD97D166C6EC1A71C4064B40314BF.e.92")&gt;</var>
+<status status="PASS" start="2024-04-11T19:45:22.328615" elapsed="0.007997"/>
+</iter>
+<iter>
+<kw name="Log" owner="BuiltIn">
+<msg time="2024-04-11T19:45:22.344613" level="INFO">12 The Science of Affection</msg>
+<arg>${element.text}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2024-04-11T19:45:22.336612" elapsed="0.008001"/>
+</kw>
+<var name="${element}">&lt;selenium.webdriver.remote.webelement.WebElement (session="59797cf984203ddc39ca0987fb213974", element="f.C2895BC220E9BA38062F8B04B4617EE7.d.140BD97D166C6EC1A71C4064B40314BF.e.93")&gt;</var>
+<status status="PASS" start="2024-04-11T19:45:22.336612" elapsed="0.008001"/>
+</iter>
+<iter>
+<kw name="Log" owner="BuiltIn">
+<msg time="2024-04-11T19:45:22.354613" level="INFO">13 Oblitus</msg>
+<arg>${element.text}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2024-04-11T19:45:22.345613" elapsed="0.009000"/>
+</kw>
+<var name="${element}">&lt;selenium.webdriver.remote.webelement.WebElement (session="59797cf984203ddc39ca0987fb213974", element="f.C2895BC220E9BA38062F8B04B4617EE7.d.140BD97D166C6EC1A71C4064B40314BF.e.94")&gt;</var>
+<status status="PASS" start="2024-04-11T19:45:22.344613" elapsed="0.010000"/>
+</iter>
+<iter>
+<kw name="Log" owner="BuiltIn">
+<msg time="2024-04-11T19:45:22.361613" level="INFO">14 I Wanna Fall. Bright Side</msg>
+<arg>${element.text}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2024-04-11T19:45:22.354613" elapsed="0.007000"/>
+</kw>
+<var name="${element}">&lt;selenium.webdriver.remote.webelement.WebElement (session="59797cf984203ddc39ca0987fb213974", element="f.C2895BC220E9BA38062F8B04B4617EE7.d.140BD97D166C6EC1A71C4064B40314BF.e.95")&gt;</var>
+<status status="PASS" start="2024-04-11T19:45:22.354613" elapsed="0.008006"/>
+</iter>
+<iter>
+<kw name="Log" owner="BuiltIn">
+<msg time="2024-04-11T19:45:22.369619" level="INFO">15 #2 Pomiędzy – serial oryginalny</msg>
+<arg>${element.text}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2024-04-11T19:45:22.362619" elapsed="0.007000"/>
+</kw>
+<var name="${element}">&lt;selenium.webdriver.remote.webelement.WebElement (session="59797cf984203ddc39ca0987fb213974", element="f.C2895BC220E9BA38062F8B04B4617EE7.d.140BD97D166C6EC1A71C4064B40314BF.e.96")&gt;</var>
+<status status="PASS" start="2024-04-11T19:45:22.362619" elapsed="0.007000"/>
+</iter>
+<iter>
+<kw name="Log" owner="BuiltIn">
+<msg time="2024-04-11T19:45:22.377613" level="INFO">16 Unique. Students. Tom 4</msg>
+<arg>${element.text}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2024-04-11T19:45:22.369619" elapsed="0.007994"/>
+</kw>
+<var name="${element}">&lt;selenium.webdriver.remote.webelement.WebElement (session="59797cf984203ddc39ca0987fb213974", element="f.C2895BC220E9BA38062F8B04B4617EE7.d.140BD97D166C6EC1A71C4064B40314BF.e.97")&gt;</var>
+<status status="PASS" start="2024-04-11T19:45:22.369619" elapsed="0.007994"/>
+</iter>
+<iter>
+<kw name="Log" owner="BuiltIn">
+<msg time="2024-04-11T19:45:22.384612" level="INFO">17 Przyjaciółka</msg>
+<arg>${element.text}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2024-04-11T19:45:22.377613" elapsed="0.008000"/>
+</kw>
+<var name="${element}">&lt;selenium.webdriver.remote.webelement.WebElement (session="59797cf984203ddc39ca0987fb213974", element="f.C2895BC220E9BA38062F8B04B4617EE7.d.140BD97D166C6EC1A71C4064B40314BF.e.98")&gt;</var>
+<status status="PASS" start="2024-04-11T19:45:22.377613" elapsed="0.008000"/>
+</iter>
+<iter>
+<kw name="Log" owner="BuiltIn">
+<msg time="2024-04-11T19:45:22.393613" level="INFO">18 Identical. Students. Tom 3</msg>
+<arg>${element.text}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2024-04-11T19:45:22.385613" elapsed="0.008000"/>
+</kw>
+<var name="${element}">&lt;selenium.webdriver.remote.webelement.WebElement (session="59797cf984203ddc39ca0987fb213974", element="f.C2895BC220E9BA38062F8B04B4617EE7.d.140BD97D166C6EC1A71C4064B40314BF.e.99")&gt;</var>
+<status status="PASS" start="2024-04-11T19:45:22.385613" elapsed="0.008000"/>
+</iter>
+<iter>
+<kw name="Log" owner="BuiltIn">
+<msg time="2024-04-11T19:45:22.414613" level="INFO">19 Iron Flame. Żelazny płomień. Empireum. Tom 2</msg>
+<arg>${element.text}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2024-04-11T19:45:22.393613" elapsed="0.021000"/>
+</kw>
+<var name="${element}">&lt;selenium.webdriver.remote.webelement.WebElement (session="59797cf984203ddc39ca0987fb213974", element="f.C2895BC220E9BA38062F8B04B4617EE7.d.140BD97D166C6EC1A71C4064B40314BF.e.100")&gt;</var>
+<status status="PASS" start="2024-04-11T19:45:22.393613" elapsed="0.021000"/>
+</iter>
+<iter>
+<kw name="Log" owner="BuiltIn">
+<msg time="2024-04-11T19:45:22.422613" level="INFO">20 Hellish Desire. Hellish. Tom 2</msg>
+<arg>${element.text}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2024-04-11T19:45:22.414613" elapsed="0.009000"/>
+</kw>
+<var name="${element}">&lt;selenium.webdriver.remote.webelement.WebElement (session="59797cf984203ddc39ca0987fb213974", element="f.C2895BC220E9BA38062F8B04B4617EE7.d.140BD97D166C6EC1A71C4064B40314BF.e.101")&gt;</var>
+<status status="PASS" start="2024-04-11T19:45:22.414613" elapsed="0.009000"/>
+</iter>
+<iter>
+<kw name="Log" owner="BuiltIn">
+<msg time="2024-04-11T19:45:22.430613" level="INFO">21 Different. Students. Tom 2</msg>
+<arg>${element.text}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2024-04-11T19:45:22.423613" elapsed="0.007000"/>
+</kw>
+<var name="${element}">&lt;selenium.webdriver.remote.webelement.WebElement (session="59797cf984203ddc39ca0987fb213974", element="f.C2895BC220E9BA38062F8B04B4617EE7.d.140BD97D166C6EC1A71C4064B40314BF.e.102")&gt;</var>
+<status status="PASS" start="2024-04-11T19:45:22.423613" elapsed="0.007000"/>
+</iter>
+<iter>
+<kw name="Log" owner="BuiltIn">
+<msg time="2024-04-11T19:45:22.439612" level="INFO">22 Hellish Souls</msg>
+<arg>${element.text}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2024-04-11T19:45:22.430613" elapsed="0.008999"/>
+</kw>
+<var name="${element}">&lt;selenium.webdriver.remote.webelement.WebElement (session="59797cf984203ddc39ca0987fb213974", element="f.C2895BC220E9BA38062F8B04B4617EE7.d.140BD97D166C6EC1A71C4064B40314BF.e.103")&gt;</var>
+<status status="PASS" start="2024-04-11T19:45:22.430613" elapsed="0.008999"/>
+</iter>
+<iter>
+<kw name="Log" owner="BuiltIn">
+<msg time="2024-04-11T19:45:22.450612" level="INFO">23 ADHD. Twój mózg jest OK. Zaufaj metodom trenerki ADHD i odzyskaj pewność siebie</msg>
+<arg>${element.text}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2024-04-11T19:45:22.439612" elapsed="0.011000"/>
+</kw>
+<var name="${element}">&lt;selenium.webdriver.remote.webelement.WebElement (session="59797cf984203ddc39ca0987fb213974", element="f.C2895BC220E9BA38062F8B04B4617EE7.d.140BD97D166C6EC1A71C4064B40314BF.e.104")&gt;</var>
+<status status="PASS" start="2024-04-11T19:45:22.439612" elapsed="0.011000"/>
+</iter>
+<iter>
+<kw name="Log" owner="BuiltIn">
+<msg time="2024-04-11T19:45:22.458633" level="INFO">24 Susza</msg>
+<arg>${element.text}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2024-04-11T19:45:22.450612" elapsed="0.008021"/>
+</kw>
+<var name="${element}">&lt;selenium.webdriver.remote.webelement.WebElement (session="59797cf984203ddc39ca0987fb213974", element="f.C2895BC220E9BA38062F8B04B4617EE7.d.140BD97D166C6EC1A71C4064B40314BF.e.105")&gt;</var>
+<status status="PASS" start="2024-04-11T19:45:22.450612" elapsed="0.008021"/>
+</iter>
+<iter>
+<kw name="Log" owner="BuiltIn">
+<msg time="2024-04-11T19:45:22.466613" level="INFO">25 Clone. Students. Tom 1</msg>
+<arg>${element.text}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2024-04-11T19:45:22.459612" elapsed="0.007001"/>
+</kw>
+<var name="${element}">&lt;selenium.webdriver.remote.webelement.WebElement (session="59797cf984203ddc39ca0987fb213974", element="f.C2895BC220E9BA38062F8B04B4617EE7.d.140BD97D166C6EC1A71C4064B40314BF.e.106")&gt;</var>
+<status status="PASS" start="2024-04-11T19:45:22.459612" elapsed="0.007001"/>
+</iter>
+<iter>
+<kw name="Log" owner="BuiltIn">
+<msg time="2024-04-11T19:45:22.475613" level="INFO">26 Poemat letniej tęsknoty</msg>
+<arg>${element.text}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2024-04-11T19:45:22.466613" elapsed="0.009000"/>
+</kw>
+<var name="${element}">&lt;selenium.webdriver.remote.webelement.WebElement (session="59797cf984203ddc39ca0987fb213974", element="f.C2895BC220E9BA38062F8B04B4617EE7.d.140BD97D166C6EC1A71C4064B40314BF.e.107")&gt;</var>
+<status status="PASS" start="2024-04-11T19:45:22.466613" elapsed="0.009000"/>
+</iter>
+<iter>
+<kw name="Log" owner="BuiltIn">
+<msg time="2024-04-11T19:45:22.483612" level="INFO">27 The Science of Temptation</msg>
+<arg>${element.text}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2024-04-11T19:45:22.475613" elapsed="0.007999"/>
+</kw>
+<var name="${element}">&lt;selenium.webdriver.remote.webelement.WebElement (session="59797cf984203ddc39ca0987fb213974", element="f.C2895BC220E9BA38062F8B04B4617EE7.d.140BD97D166C6EC1A71C4064B40314BF.e.108")&gt;</var>
+<status status="PASS" start="2024-04-11T19:45:22.475613" elapsed="0.007999"/>
+</iter>
+<iter>
+<kw name="Log" owner="BuiltIn">
+<msg time="2024-04-11T19:45:22.490612" level="INFO">28 Fala</msg>
+<arg>${element.text}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2024-04-11T19:45:22.483612" elapsed="0.007000"/>
+</kw>
+<var name="${element}">&lt;selenium.webdriver.remote.webelement.WebElement (session="59797cf984203ddc39ca0987fb213974", element="f.C2895BC220E9BA38062F8B04B4617EE7.d.140BD97D166C6EC1A71C4064B40314BF.e.109")&gt;</var>
+<status status="PASS" start="2024-04-11T19:45:22.483612" elapsed="0.007000"/>
+</iter>
+<iter>
+<kw name="Log" owner="BuiltIn">
+<msg time="2024-04-11T19:45:22.498612" level="INFO">29 #3 Pomiędzy – serial oryginalny</msg>
+<arg>${element.text}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2024-04-11T19:45:22.491612" elapsed="0.007000"/>
+</kw>
+<var name="${element}">&lt;selenium.webdriver.remote.webelement.WebElement (session="59797cf984203ddc39ca0987fb213974", element="f.C2895BC220E9BA38062F8B04B4617EE7.d.140BD97D166C6EC1A71C4064B40314BF.e.110")&gt;</var>
+<status status="PASS" start="2024-04-11T19:45:22.491612" elapsed="0.007000"/>
+</iter>
+<iter>
+<kw name="Log" owner="BuiltIn">
+<msg time="2024-04-11T19:45:22.507613" level="INFO">30 Schronisko, które spowijał mrok</msg>
+<arg>${element.text}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2024-04-11T19:45:22.499612" elapsed="0.008001"/>
+</kw>
+<var name="${element}">&lt;selenium.webdriver.remote.webelement.WebElement (session="59797cf984203ddc39ca0987fb213974", element="f.C2895BC220E9BA38062F8B04B4617EE7.d.140BD97D166C6EC1A71C4064B40314BF.e.111")&gt;</var>
+<status status="PASS" start="2024-04-11T19:45:22.498612" elapsed="0.009001"/>
+</iter>
+<var>${element}</var>
+<value>@{empikbestsellers_list}</value>
+<status status="PASS" start="2024-04-11T19:45:21.977277" elapsed="0.530336"/>
+</for>
 <kw name="Close Browser" owner="SeleniumLibrary" type="TEARDOWN">
 <doc>Closes the current browser.</doc>
-<status status="PASS" start="2024-04-10T19:45:03.069258" elapsed="2.122689"/>
+<status status="PASS" start="2024-04-11T19:45:22.507613" elapsed="2.138881"/>
 </kw>
-<doc>My first test</doc>
-<status status="PASS" start="2024-04-10T19:44:50.441352" elapsed="14.750595"/>
+<status status="PASS" start="2024-04-11T19:45:15.460066" elapsed="9.188378"/>
 </test>
-<test id="s1-t2" name="MySecondTest" line="56">
-<kw name="Open Wikipedia" type="SETUP">
-<kw name="Open Browser" owner="SeleniumLibrary">
-<msg time="2024-04-10T19:45:05.194934" level="INFO">Opening browser 'Chrome' to base url 'https://pl.wikipedia.org'.</msg>
-<arg>https://pl.wikipedia.org</arg>
-<arg>Chrome</arg>
-<arg>executable_path=c:/chromedriver/chromedriver.exe</arg>
-<doc>Opens a new browser instance to the optional ``url``.</doc>
-<status status="PASS" start="2024-04-10T19:45:05.194934" elapsed="3.099534"/>
-</kw>
-<status status="PASS" start="2024-04-10T19:45:05.194934" elapsed="3.100531"/>
-</kw>
-<kw name="Capture Page Screenshot" owner="SeleniumLibrary">
-<msg time="2024-04-10T19:45:08.599464" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="screeny/screenshot2.png"&gt;&lt;img src="screeny/screenshot2.png" width="800px"&gt;&lt;/a&gt;</msg>
-<arg>${project_path}/screenshot2.png</arg>
-<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
-<status status="PASS" start="2024-04-10T19:45:08.295465" elapsed="0.303999"/>
-</kw>
-<kw name="Close Browser" owner="SeleniumLibrary" type="TEARDOWN">
-<doc>Closes the current browser.</doc>
-<status status="PASS" start="2024-04-10T19:45:08.600465" elapsed="2.105052"/>
-</kw>
-<doc>My second test - incorrect password</doc>
-<status status="PASS" start="2024-04-10T19:45:05.193936" elapsed="5.512527"/>
-</test>
-<status status="PASS" start="2024-04-10T19:44:50.220351" elapsed="20.488116"/>
+<status status="PASS" start="2024-04-11T19:45:15.216904" elapsed="9.435535"/>
 </suite>
 <statistics>
 <total>
-<stat pass="2" fail="0" skip="0">All Tests</stat>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
 </total>
 <tag>
 </tag>
 <suite>
-<stat pass="2" fail="0" skip="0" id="s1" name="Test001">Test001</stat>
+<stat pass="1" fail="0" skip="0" id="s1" name="webElements01">webElements01</stat>
 </suite>
 </statistics>
 <errors>

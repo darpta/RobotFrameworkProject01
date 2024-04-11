@@ -12,7 +12,6 @@ ${project_path}  C:/Users/Dario/PycharmProjects/RobotFrameworkProject01/screeny
 ${error_message}  Podany login lub hasło są nieprawidłowe. Spróbuj jeszcze raz.
 
 *** Keywords ***
-
 Open Wikipedia
     Open Browser  https://pl.wikipedia.org  Chrome  executable_path=c:/chromedriver/chromedriver.exe
 
