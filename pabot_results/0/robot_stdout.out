@@ -1,0 +1,20 @@
+==============================================================================
+RobotFrameworkProject01                                                       
+==============================================================================
+RobotFrameworkProject01.Automation                                            
+==============================================================================
+RobotFrameworkProject01.Automation.Sekcja501                                  
+==============================================================================
+MyTestCase1 :: Moja dokumentacja TestCase1                            | PASS |
+TestCase 1
+------------------------------------------------------------------------------
+RobotFrameworkProject01.Automation.Sekcja501                          | PASS |
+1 test, 1 passed, 0 failed
+==============================================================================
+RobotFrameworkProject01.Automation                                    | PASS |
+1 test, 1 passed, 0 failed
+==============================================================================
+RobotFrameworkProject01                                               | PASS |
+1 test, 1 passed, 0 failed
+==============================================================================
+Output:  C:\Users\Dario\PycharmProjects\RobotFrameworkProject01\pabot_results\0\output.xml

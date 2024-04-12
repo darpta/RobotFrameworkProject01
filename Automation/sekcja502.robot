@@ -1,10 +1,11 @@
+# PORZADKOWANIE KODU
+# keywords i variables w oddzielnych plikach w folderach
+
 *** Settings ***
 Library  SeleniumLibrary
-# wykonanie na poczatku testu
 Test Setup  Open Wikipedia
-# wykonanie na koncu testu
+# dla pewnosci mozna podac sciezke: Test Setup  wikipedia_keywords.Open Wikipedia
 Test Teardown  Close Browser
-# zbiorczy plik z ustawieniami
 Resource  ../my_keywords/wikipedia_keywords.robot
 Resource  ../my_variables/wikipedia_variables.robot
 
@@ -14,10 +15,12 @@ MyFirstTest
     Search Wikipedia  Adam Małysz
     Capture Page Screenshot  ${project_path}/screenshot.png
 
-
 MySecondTest
     [Documentation]  My second test - incorrect password
     Search Wikipedia  Gladiator
     Capture Page Screenshot  ${project_path}/screenshot2.png
 
-# Run Keyword And Ignore Error - ostroznie mozna przegapic bledy
+MyThirdTest
+    [Documentation]  My second test - incorrect password
+    Incorrect Log In Wikipedia  RobotTests
+    Capture Page Screenshot  ${project_path}/screenshot3.png
