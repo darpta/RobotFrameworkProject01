@@ -22,3 +22,8 @@
 - install pabot (https://pabot.org/)  
   `pip install -U robotframework-pabot`  
   or install Interpreter in PyCharm
+
+## API testing - RequestsLibrary
+
+- install RequestsLibrary  
+  `pip install robotframework-requests`

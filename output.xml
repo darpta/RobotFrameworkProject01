@@ -1,57 +1,114 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Rebot 7.0 (Python 3.12.2 on win32)" generated="2024-04-12T14:03:26.248082" rpa="false" schemaversion="5">
+<robot generator="Robot 7.0 (Python 3.12.2 on win32)" generated="2024-04-12T16:25:11.820960" rpa="false" schemaversion="5">
 <suite id="s1" name="RobotFrameworkProject01" source="C:\Users\Dario\PycharmProjects\RobotFrameworkProject01">
 <suite id="s1-s1" name="Automation" source="C:\Users\Dario\PycharmProjects\RobotFrameworkProject01\Automation">
-<suite id="s1-s1-s1" name="Sekcja501" source="C:\Users\Dario\PycharmProjects\RobotFrameworkProject01\Automation\sekcja501.robot">
-<test id="s1-s1-s1-t1" name="MyTestCase1" line="17">
-<kw name="Open Browser" owner="SeleniumLibrary">
-<msg time="2024-04-12T14:03:18.843597" level="INFO">Opening browser 'Chrome' to base url 'http://demo.automationtesting.in/Register.html'.</msg>
-<arg>${url}</arg>
-<arg>Chrome</arg>
-<arg>executable_path=${chromedriver_path}</arg>
-<doc>Opens a new browser instance to the optional ``url``.</doc>
-<status status="PASS" start="2024-04-12T14:03:18.842596" elapsed="4.947692"/>
+<suite id="s1-s1-s1" name="Api Response" source="C:\Users\Dario\PycharmProjects\RobotFrameworkProject01\Automation\api_response.robot">
+<test id="s1-s1-s1-t1" name="API_TEST" line="12">
+<kw name="Create Dictionary" owner="BuiltIn">
+<msg time="2024-04-12T16:25:11.958061" level="INFO">${headers} = {'Content-Type': 'application/json', 'Authorization': 'Bearer c11d95ed12e73a67b8cee2b4e711623badbb178ca4c8e8ec90c80163e4f2f4cd'}</msg>
+<var>${headers}</var>
+<arg>Content-Type=application/json</arg>
+<arg>Authorization=Bearer ${AUTH_BEARER}</arg>
+<doc>Creates and returns a dictionary based on the given ``items``.</doc>
+<status status="PASS" start="2024-04-12T16:25:11.957074" elapsed="0.000987"/>
 </kw>
-<kw name="Wylosuj Date Wypisz Argument" owner="MyLibrary">
-<msg time="2024-04-12T14:03:23.792286" level="INFO">PONIEDZIALEK
-Moj wylosowany rok:  1993</msg>
-<arg>poniedzialek</arg>
-<status status="PASS" start="2024-04-12T14:03:23.791283" elapsed="0.001003"/>
+<kw name="GET" owner="RequestsLibrary">
+<msg time="2024-04-12T16:25:12.965363" level="INFO">GET Request : url=https://simple-books-api.glitch.me/status 
+ path_url=/status 
+ headers={'User-Agent': 'python-requests/2.31.0', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Connection': 'keep-alive'} 
+ body=None 
+ </msg>
+<msg time="2024-04-12T16:25:12.965363" level="INFO">GET Response : url=https://simple-books-api.glitch.me/status 
+ status=200, reason=OK 
+ headers={'Date': 'Fri, 12 Apr 2024 14:25:11 GMT', 'Content-Type': 'application/json; charset=utf-8', 'Content-Length': '15', 'Connection': 'keep-alive', 'x-powered-by': 'Express', 'etag': 'W/"f-v/Y1JusChTxrQUzPtNAKycooOTA"'} 
+ body={"status":"OK"} 
+ </msg>
+<msg time="2024-04-12T16:25:12.965363" level="INFO">${GET_response} = &lt;Response [200]&gt;</msg>
+<var>${GET_response}</var>
+<arg>${url}/status</arg>
+<doc>Sends a GET request.</doc>
+<status status="PASS" start="2024-04-12T16:25:11.958061" elapsed="1.008302"/>
 </kw>
-<kw name="Set Test Message" owner="BuiltIn">
-<msg time="2024-04-12T14:03:23.793293" level="INFO">Set test message to:
-TestCase 1</msg>
-<arg>TestCase 1</arg>
-<doc>Sets message for the current test case.</doc>
-<status status="PASS" start="2024-04-12T14:03:23.792286" elapsed="0.001007"/>
+<kw name="Status Should Be" owner="RequestsLibrary">
+<arg>200</arg>
+<arg>${GET_response}</arg>
+<doc>Fails if response status code is different than the expected.</doc>
+<status status="PASS" start="2024-04-12T16:25:12.967356" elapsed="0.001017"/>
 </kw>
-<doc>Moja dokumentacja TestCase1</doc>
-<tag>group 1</tag>
-<tag>tag 1</tag>
-<status status="PASS" start="2024-04-12T14:03:18.840597" elapsed="4.952696">TestCase 1</status>
+<kw name="GET" owner="RequestsLibrary">
+<msg time="2024-04-12T16:25:14.054018" level="INFO">GET Request : url=https://simple-books-api.glitch.me/orders 
+ path_url=/orders 
+ headers={'User-Agent': 'python-requests/2.31.0', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Connection': 'keep-alive', 'Content-Type': 'application/json', 'Authorization': 'Bearer c11d95ed12e73a67b8cee2b4e711623badbb178ca4c8e8ec90c80163e4f2f4cd'} 
+ body=None 
+ </msg>
+<msg time="2024-04-12T16:25:14.055017" level="INFO">GET Response : url=https://simple-books-api.glitch.me/orders 
+ status=200, reason=OK 
+ headers={'Date': 'Fri, 12 Apr 2024 14:25:12 GMT', 'Content-Type': 'application/json; charset=utf-8', 'Content-Length': '751', 'Connection': 'keep-alive', 'x-powered-by': 'Express', 'etag': 'W/"2ef-ZPPbcALkxbq+8dzRFTn+RAKS9/M"'} 
+ body=[{"id":"is8clo0bY7i8vQ6z63ENE","bookId":5,"customerName":"darpta","createdBy":"1b274d0f54432bdd9fd470d04f569e4b7f3873f2932f03d2e5f1bf8fff2bcec8","quantity":1,"timestamp":1712926573555},{"id":"QtsieFc8wXUt7Ughcj745","bookId":5,"customerName":"darptarek","createdBy":"1b274d0f54432bdd9fd470d04f569e4b7f3873f2932f03d2e5f1bf8fff2bcec8","quantity":1,"timestamp":1712926621945},{"id":"13RIUt60LsA_1ahpNsIBB","bookId":5,"customerName":"darptarek","createdBy":"1b274d0f54432bdd9fd470d04f569e4b7f3873f2932f03d2e5f1bf8fff2bcec8","quantity":1,"timestamp":1712928825941},{"id":"0and1lmvOS855UnMe_NTc","bookId":5,"customerName":"dolinaRoztoczy","createdBy":"1b274d0f54432bdd9fd470d04f569e4b7f3873f2932f03d2e5f1bf8fff2bcec8","quantity":1,"timestamp":1712930392433}] 
+ </msg>
+<msg time="2024-04-12T16:25:14.055017" level="INFO">${GET1_response} = &lt;Response [200]&gt;</msg>
+<var>${GET1_response}</var>
+<arg>${url}/orders</arg>
+<arg>headers=${headers}</arg>
+<doc>Sends a GET request.</doc>
+<status status="PASS" start="2024-04-12T16:25:12.969359" elapsed="1.085658"/>
+</kw>
+<kw name="Log To Console" owner="BuiltIn">
+<arg>${GET1_response.json()}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" start="2024-04-12T16:25:14.056014" elapsed="0.003004"/>
+</kw>
+<kw name="Should Be Equal As Strings" owner="BuiltIn">
+<arg>${createdBy1}</arg>
+<arg>${GET1_response.json()}[0][createdBy]</arg>
+<doc>Fails if objects are unequal after converting them to strings.</doc>
+<status status="PASS" start="2024-04-12T16:25:14.060017" elapsed="0.001004"/>
+</kw>
+<kw name="Should Be Equal As Strings" owner="BuiltIn">
+<arg>${createdBy1}</arg>
+<arg>${GET1_response.json()}[1][createdBy]</arg>
+<doc>Fails if objects are unequal after converting them to strings.</doc>
+<status status="PASS" start="2024-04-12T16:25:14.062013" elapsed="0.002004"/>
+</kw>
+<kw name="Should Be Equal As Integers" owner="BuiltIn">
+<msg time="2024-04-12T16:25:14.066017" level="INFO">Argument types are:
+&lt;class 'str'&gt;
+&lt;class 'int'&gt;</msg>
+<arg>5</arg>
+<arg>${GET1_response.json()}[0][bookId]</arg>
+<doc>Fails if objects are unequal after converting them to integers.</doc>
+<status status="PASS" start="2024-04-12T16:25:14.065013" elapsed="0.001004"/>
+</kw>
+<kw name="Should Be Equal As Strings" owner="BuiltIn">
+<msg time="2024-04-12T16:25:14.069015" level="INFO">Argument types are:
+&lt;class 'str'&gt;
+&lt;class 'int'&gt;</msg>
+<arg>5</arg>
+<arg>${GET1_response.json()}[1][bookId]</arg>
+<doc>Fails if objects are unequal after converting them to strings.</doc>
+<status status="PASS" start="2024-04-12T16:25:14.067013" elapsed="0.002002"/>
+</kw>
+<status status="PASS" start="2024-04-12T16:25:11.957074" elapsed="2.112939"/>
 </test>
-<status status="PASS" start="2024-04-12T14:03:18.632000" elapsed="5.161993"/>
+<status status="PASS" start="2024-04-12T16:25:11.846964" elapsed="2.226049"/>
 </suite>
-<status status="PASS" start="2024-04-12T14:03:18.631000" elapsed="5.163994"/>
+<status status="PASS" start="2024-04-12T16:25:11.844967" elapsed="2.233049"/>
 </suite>
-<doc>[https://pabot.org/?ref=log|Pabot] result from 1 executions.</doc>
-<status status="PASS" start="2024-04-12T14:03:18.615000" elapsed="5.180993"/>
+<status status="PASS" start="2024-04-12T16:25:11.822961" elapsed="2.260049"/>
 </suite>
 <statistics>
 <total>
 <stat pass="1" fail="0" skip="0">All Tests</stat>
 </total>
 <tag>
-<stat pass="1" fail="0" skip="0">group 1</stat>
-<stat pass="1" fail="0" skip="0">tag 1</stat>
 </tag>
 <suite>
 <stat pass="1" fail="0" skip="0" id="s1" name="RobotFrameworkProject01">RobotFrameworkProject01</stat>
 <stat pass="1" fail="0" skip="0" id="s1-s1" name="Automation">RobotFrameworkProject01.Automation</stat>
-<stat pass="1" fail="0" skip="0" id="s1-s1-s1" name="Sekcja501">RobotFrameworkProject01.Automation.Sekcja501</stat>
+<stat pass="1" fail="0" skip="0" id="s1-s1-s1" name="Api Response">RobotFrameworkProject01.Automation.Api Response</stat>
 </suite>
 </statistics>
 <errors>
-<msg time="2024-04-12T14:03:18.596288" level="WARN">Error in file 'C:\Users\Dario\PycharmProjects\RobotFrameworkProject01\my_keywords\empik_keywords.robot' on line 21: The '[Return]' setting is deprecated. Use the 'RETURN' statement instead.</msg>
+<msg time="2024-04-12T16:25:11.811958" level="WARN">Error in file 'C:\Users\Dario\PycharmProjects\RobotFrameworkProject01\my_keywords\empik_keywords.robot' on line 21: The '[Return]' setting is deprecated. Use the 'RETURN' statement instead.</msg>
 </errors>
 </robot>
